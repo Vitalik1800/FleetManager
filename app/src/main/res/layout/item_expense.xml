@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="expense"
+            type="com.example.fleetmanager.Expense" />
+        <variable
+            name="car"
+            type="com.example.fleetmanager.Car" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_margin="5dp"
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{expense.expenseDate}"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_margin="5dp"
+            android:id="@+id/textViewDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{expense.description}"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_margin="5dp"
+            android:id="@+id/textViewFuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(expense.amount)}"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_margin="5dp"
+            android:id="@+id/textViewCarName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{car.model}"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</layout>

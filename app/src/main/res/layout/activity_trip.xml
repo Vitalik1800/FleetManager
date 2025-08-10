@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TripActivity"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Spinner
+        android:layout_margin="5dp"
+        android:id="@+id/spinnerCar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/select_car"
+        android:minHeight="48dp"/>
+
+    <EditText
+        android:layout_margin="5dp"
+        android:id="@+id/editTextDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:textStyle="bold"
+        android:inputType="date"
+        android:importantForAutofill="no"
+        android:hint="@string/date"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <EditText
+        android:layout_margin="5dp"
+        android:id="@+id/editTextDistance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:textStyle="bold"
+        android:inputType="numberDecimal"
+        android:importantForAutofill="no"
+        android:hint="@string/distance"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <EditText
+        android:layout_margin="5dp"
+        android:id="@+id/editTextFuelConsumption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:textStyle="bold"
+        android:inputType="numberDecimal"
+        android:importantForAutofill="no"
+        android:hint="@string/fuel_consumption"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <Button
+        android:id="@+id/buttonAddTrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="1dp"
+        android:layout_margin="5dp"
+        android:text="@string/add_trip"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/buttonUpdateTrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="1dp"
+        android:layout_margin="5dp"
+        android:text="@string/update_trip"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/buttonDeleteTrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="1dp"
+        android:layout_margin="5dp"
+        android:text="@string/delete_trip"
+        tools:ignore="VisualLintButtonSize" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTrips"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
